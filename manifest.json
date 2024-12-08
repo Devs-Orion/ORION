@@ -1,0 +1,23 @@
+{
+    "name": "ORION PWA",
+    "lang": "es",
+    "short_name": "ORION",
+    "description": "Progressive Web App (PWA) complementaria del videojuego ORION. Esta permitirá a los usuarios acceder a la web tanto desde dispositivos móviles como de escritorio, con la ventaja de poder usarla incluso sin conexión a internet una vez que esté instalada en su dispositivo.",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#00fbff",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "ORION-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "ORION-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

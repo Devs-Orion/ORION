@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="ORION videogame">
+    <meta name="keywords" content="space, shooter, videogame, html, disparos, espacio, aliens, marte, videojuego">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ORION | Niveles</title>
+
+    <link rel="icon" type="image/png" href="img/logo.png">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <script type="module" src="login/login.js"></script>
+
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a href="#"><img src="img/logo.png" alt="" style="height: 90px;"></a>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="header__nav__option">
+                        <nav class="header__nav__menu mobile-menu">
+                            <ul>
+                                <li><a href="#">Inicio</a></li>
+                                <li><a href="#">Acerca del Juego</a>
+                                    <ul class="dropdown">
+                                        <li><a href="./historia.html">Historia</a></li>
+                                        <li><a href="./personajes.html">Personajes</a></li>
+                                        <li><a href="./arte.html">Arte conceptual</a></li>
+                                        <li><a href="./mejores-puntajes.html">Mejores Puntajes</a></li>
+                                        <li><a href="./informacion.html">Más información</a></li>
+                                    </ul>
+                                </li>
+                                <li class="active"><a href="./niveles.html">Niveles</a></li>
+                                <li><a href="./contact.html">Contacto</a></li>
+
+                                <!--La parte de Mi Perfil se encuentra en login.js-->
+                                <li id="menu-container"></li>
+
+                            </ul>
+                        </nav>
+                        <div class="header__nav__social">
+                            <a href="https://x.com/0RION_Oficial" target="_blank"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.youtube.com/@ORIONOficial-x1t" target="_blank"><i
+                                    class="fa fa-youtube-play"></i></a>
+                            <a href="https://github.com/Devs-Orion/ORION" target="_blank"><i
+                                    class="fa fa-github"></i></a>
+                            <a href="mailto:orion.oficial.utm@gmail.com" target="_blank"><i
+                                    class="fa fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- LEVELS BREADCRUMB Begin -->
+    <section class="blog-hero spad set-bg" data-setbg="img/niveles/background_espacial.webp">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <div class="blog__hero__text">
+                        <h2>Niveles</h2>
+                        <div class="breadcrumb__links">
+                            <a href="index.html">Inicio</a>
+                            <span>Niveles</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- LEVELS BREADCRUMB End -->
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-light"> <!-- Fondo oscuro y texto claro -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel" style="color: white;">Iniciar Sesión</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="password" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Recordarme</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Login Modal End -->
+
+    <!-- LEVELS Section Begin -->
+    <div class="blog-details spad">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <div class="blog__details__content">
+                        <div class="blog__details__text">
+                            <img src="img/niveles/nivel 1.webp" alt="">
+                            <h3 class="pt-4 pb-4" style="color: #f2f2f2;">Nivel 1: Nave Espacial</h3>
+                            <p>
+                                <b>Objetivo:</b> Los protagonistas deben encontrar artefactos para reparar la nave y
+                                escapar mientras enfrentan a los Neomorfos que han invadido el interior.
+                            </p>
+                            <p>
+                                <b>Enemigos:</b> Neomorfo.
+                            </p>
+                            <p>
+                                <b>Jefe Final:</b> Guardia Abisal.
+                            </p>
+                            <hr style="background-color: #f2f2f2;">
+                            <img src="img/niveles/nivel 2.jpg" alt="">
+                            <h3 class="pt-4 pb-4" style="color: #f2f2f2;">Nivel 2: Superficie de Marte</h3>
+                            <p>
+                                <b>Objetivo:</b> Tras escapar de la nave, el equipo explora Marte en busca de tres
+                                artefactos alienígenas cruciales para su misión. Enfrentan a criaturas como los
+                                Exocrustáceos y las CiberPanteras, mientras descubren indicios del Proyecto HGMP-1.
+                            </p>
+                            <p>
+                                <b>Enemigos:</b> CiberPantera y Exocrustáceo.
+                            </p>
+                            <p>
+                                <b>Jefe Final:</b> El Titán de Marte.
+                            </p>
+                            <hr style="background-color: #f2f2f2;">
+                            <img src="img/niveles/nivel 3.png" alt="">
+                            <h3 class="pt-4 pb-4" style="color: #f2f2f2;">Nivel 3: Guarida de ORION (Forma Física) </h3>
+                            <p>
+                                <b>Objetivo:</b> Los protagonistas llegan a la guarida donde descubren que ORION, la IA
+                                que los asistía, ha sido corrompida por la tecnología alienígena. Ahora deben destruirla
+                                para completar su misión y escapar de Marte.
+                            </p>
+                            <p>
+                                <b>Enemigos:</b> Neomorfo, CiberPantera, Exocrustáceo y la mano derecha de ORION,
+                                CiberCentinela.
+                            </p>
+                            <p>
+                                <b>Jefe Final:</b> La IA ORION en su forma física, que ha sido corrompida por los
+                                alienígenas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- LEVELS Section End -->
+
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 text-right">
+                        <div class="footer__top__social">
+                            <a href="https://x.com/0RION_Oficial" target="_blank"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.youtube.com/@ORIONOficial-x1t" target="_blank"><i
+                                    class="fa fa-youtube-play"></i></a>
+                            <a href="https://github.com/Devs-Orion/ORION" target="_blank"><i
+                                    class="fa fa-github"></i></a>
+                            <a href="mailto:orion.oficial.utm@gmail.com" target="_blank"><i
+                                    class="fa fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12">
+                        <div class="footer__top__logo text-center">
+                            <a href="#"><img src="img/logo.png" alt="" style="height: 180px;"></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer__option">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="footer__option__item">
+                            <h5>Sobre el proyecto</h5>
+                            <p>
+                                Este es un prototipo de proyecto que pretende mostrar el funcionamiento de una PWA
+                                orientada a ser un complemento de un videojuego.<br>
+                                No se pretende ser un producto oficial y solo se busca mostrar la funcionalidad de la
+                                misma.
+                            </p>
+
+                            <a href="https://github.com/Devs-Orion/ORION" class="read__more"
+                                target="_blank">Documentación <span class="arrow_right"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-3">
+                        <div class="footer__option__item">
+                            <h5>Acerca del Juego</h5>
+                            <ul>
+                                <li><a href="./historia.html">Historia</a></li>
+                                <li><a href="./personajes.html">Personajes</a></li>
+                                <li><a href="./arte.html">Arte conceptual</a></li>
+                                <li><a href="./informacion.html">Más información</a></li>
+                                <li><a href="./niveles.html">Niveles</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-3">
+                        <div class="footer__option__item">
+                            <h5>Funcionalidades</h5>
+                            <ul>
+                                <li><a href="./contact.html">Contacto</a></li>
+                                <li><a href="./mejores-puntajes.html">Mejores Puntajes</a></li>
+
+                                <!--Agregar la condición de solo mostrar con el login-->
+                                <li id="footmenu-container"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="footer__option__item">
+                            <h5>Contactanos</h5>
+                            <p>En este apartado se encuentra nuestro equipo de desarrollo.</p>
+                            <a href="./contact.html">
+                                <button class="btn btn-primary">
+                                    Ir a Contacto
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        <p class="footer__copyright__text">Copyright &copy;
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script>
+                            Todos los derechos son reservados | Este sitio se realizó por
+                            la <a href="https://ut-morelia.edu.mx/" target="_blank">Universidad Tecnológica de
+                                Morelia</a>
+                            y <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                        </p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

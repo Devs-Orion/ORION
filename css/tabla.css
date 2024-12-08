@@ -1,0 +1,19 @@
+  .table th:nth-child(1),
+  .table td:nth-child(1) {
+      width: 10%;
+  }
+
+  .table th:nth-child(2),
+  .table td:nth-child(2),
+  .table th:nth-child(3),
+  .table td:nth-child(3) {
+      width: 45%;
+  }
+
+  .table tbody tr:nth-child(odd) {
+      background-color: #f2f2f2;
+  }
+
+  .table tbody tr:nth-child(even) {
+      background-color: #e6e6e6;
+  }
