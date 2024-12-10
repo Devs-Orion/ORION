@@ -206,13 +206,26 @@
                             height="450" style="border:0;"></iframe>
                     </div>
                 </div>
+                <!--Contact form-->
                 <div class="col-lg-6 col-md-6">
                     <div class="contact__form">
-                        <h3>Déjanos un mensaje!</h3>
-                        <form action="#">
-                            <input type="text" placeholder="Nombre">
-                            <input type="text" placeholder="Correo de contacto">
-                            <textarea placeholder="Mensaje"></textarea>
+                        <h3>¡Déjanos un mensaje!</h3>
+                        <div id="alert-success" class="alert alert-success d-none" role="alert">
+                            ¡Mensaje enviado con éxito!
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div id="alert-danger" class="alert alert-danger d-none" role="alert">
+                            Error al enviar el mensaje. Por favor, intenta nuevamente.
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <form id="contactForm" class="mt-2">
+                            <input type="text" id="name" placeholder="Nombre">
+                            <input type="text" id="email" placeholder="Correo de contacto">
+                            <textarea id="message" placeholder="Mensaje"></textarea>
                             <button type="submit" class="site-btn">Enviar Mensaje</button>
                         </form>
                     </div>
@@ -354,6 +367,7 @@
     <!-- Footer Section End -->
 
     <!-- Js Plugins -->
+    <script src="app.js" type="module"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
