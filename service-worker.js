@@ -23,6 +23,8 @@ const urlsToCache = [
     'js/jquery.slicknav.js',
     'js/owl.carousel.min.js',
     'js/main.js',
+    'js/personajes.js',
+    'login/login.js',
 
     // Archivo de estilo
     'css/bootstrap.min.css',
@@ -32,7 +34,7 @@ const urlsToCache = [
     'css/magnific-popup.css',
     'css/slicknav.min.css',
     'css/style.css',
-    'css/tabla.css" type="text/css',
+    'css/tabla.css',
 
     // Fuentes
     'https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap',
@@ -48,6 +50,14 @@ const urlsToCache = [
     'img/niveles/nivel 3.png',
     'ORION-512.png',
     'ORION-192.png',
+
+    'img/niveles/background_espacial.webp',
+    'img/niveles/nivel_1.webp',
+    'img/niveles/nivel_2.jpg',
+    'img/niveles/nivel_3.png',
+
+    'img/team/steven.JPG',
+    'img/team/diego.jpg',
 
     'img/breadcrumb-bg.jpg',
     'img/hero/hero-marte.jpg',
@@ -103,14 +113,43 @@ self.addEventListener('activate', event => {
 
 // Intercepta las solicitudes de red y responde con los recursos en caché si están disponibles
 self.addEventListener('fetch', event => {
-    event.respondWith(
-        caches.match(event.request)
-            .then(response => {
-                return response || fetch(event.request);
-            })
-            .catch(() => {
-                return caches.match('/index.html');
-            })
-    );
+    // Verifica si la solicitud es a la API de Firebase
+    if (event.request.url.includes('https://orion-bd-default-rtdb.firebaseio.com/.json')) {
+        event.respondWith(
+            caches.match(event.request)
+                .then(response => {
+                    // Si la respuesta está en caché, devolverla
+                    if (response) {
+                        return response;
+                    }
+
+                    // Si no está en caché, hacer la solicitud a la red
+                    return fetch(event.request)
+                        .then(networkResponse => {
+                            // Asegurarse de que la respuesta es válida antes de almacenarla
+                            if (networkResponse && networkResponse.status === 200) {
+                                caches.open(CACHE_NAME)
+                                    .then(cache => {
+                                        cache.put(event.request, networkResponse.clone()); // Guardar en caché
+                                    });
+                            }
+                            return networkResponse;
+                        })
+                        .catch(() => {
+                            // Si no hay conexión, devolver una respuesta predeterminada desde el caché
+                            return caches.match('/index.html');
+                        });
+                })
+        );
+    } else {
+        // Para otras solicitudes, la lógica puede ser la misma que la de caché
+        event.respondWith(
+            caches.match(event.request)
+                .then(response => {
+                    return response || fetch(event.request);
+                })
+        );
+    }
 });
+
 
