@@ -38,6 +38,17 @@ const urlsToCache = [
     'https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap',
     'https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap',
     'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css',
+    'fonts/ElegantIcons.eot',
+    'fonts/ElegantIcons.svg',
+    'fonts/ElegantIcons.ttf',
+    'fonts/ElegantIcons.woff',
+    'fonts/fontawesome-webfont.eot',
+    'fonts/fontawesome-webfont.svg',
+    'fonts/fontawesome-webfont.ttf',
+    'fonts/fontawesome-webfont.woff',
+    'fonts/fontawesome-webfont.woff2',
+    'fonts/FontAwesome.otf',
+
 
     //Imagenes
     'img/logo.png',
@@ -74,8 +85,10 @@ const urlsToCache = [
     'img/home/despegue.jpeg',
     'img/home/astronautas.jpeg',
 
-
-
+    'img/icons/clasificacion.png',
+    'img/icons/frascos.png',
+    'img/icons/info.png',
+    'img/icons/matraz.png',
 
 ];
 
