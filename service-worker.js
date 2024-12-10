@@ -23,8 +23,6 @@ const urlsToCache = [
     'js/jquery.slicknav.js',
     'js/owl.carousel.min.js',
     'js/main.js',
-    'js/personajes.js',
-    'login/login.js',
 
     // Archivo de estilo
     'css/bootstrap.min.css',
