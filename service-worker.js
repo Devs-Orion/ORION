@@ -113,43 +113,15 @@ self.addEventListener('activate', event => {
 
 // Intercepta las solicitudes de red y responde con los recursos en caché si están disponibles
 self.addEventListener('fetch', event => {
-    // Verifica si la solicitud es a la API de Firebase
-    if (event.request.url.includes('https://orion-bd-default-rtdb.firebaseio.com/.json')) {
-        event.respondWith(
-            caches.match(event.request)
-                .then(response => {
-                    // Si la respuesta está en caché, devolverla
-                    if (response) {
-                        return response;
-                    }
-
-                    // Si no está en caché, hacer la solicitud a la red
-                    return fetch(event.request)
-                        .then(networkResponse => {
-                            // Asegurarse de que la respuesta es válida antes de almacenarla
-                            if (networkResponse && networkResponse.status === 200) {
-                                caches.open(CACHE_NAME)
-                                    .then(cache => {
-                                        cache.put(event.request, networkResponse.clone()); // Guardar en caché
-                                    });
-                            }
-                            return networkResponse;
-                        })
-                        .catch(() => {
-                            // Si no hay conexión, devolver una respuesta predeterminada desde el caché
-                            return caches.match('/index.html');
-                        });
-                })
-        );
-    } else {
-        // Para otras solicitudes, la lógica puede ser la misma que la de caché
-        event.respondWith(
-            caches.match(event.request)
-                .then(response => {
-                    return response || fetch(event.request);
-                })
-        );
-    }
+    event.respondWith(
+        caches.match(event.request)
+            .then(response => {
+                return response || fetch(event.request);
+            })
+            .catch(() => {
+                return caches.match('/index.html');
+            })
+    );
 });
 
 
